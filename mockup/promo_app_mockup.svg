@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="390" height="844" viewBox="0 0 390 844" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg{fill:#F6F8FB}
+      .card{fill:#FFFFFF;stroke:#E6E9EF;stroke-width:1;rx:14}
+      .accent{fill:#2E6BFF}
+      .muted{fill:#98A0B3}
+      .title{font:700 18px/22px 'Segoe UI', Arial}
+      .label{font:600 12px/14px 'Segoe UI', Arial;fill:#374151}
+      .input{font:400 14px/18px 'Segoe UI', Arial;fill:#0F172A}
+      .small{font:400 12px 'Segoe UI', Arial;fill:#475569}
+      .btn{fill:#2E6BFF;rx:10}
+      .btnText{font:700 14px/16px 'Segoe UI', Arial;fill:#fff}
+      .previewTitle{font:700 16px 'Segoe UI', Arial;fill:#0F172A}
+      .previewBox{fill:#0B1220;opacity:0.04;rx:8}
+    </style>
+  </defs>
+
+  <rect class="bg" width="390" height="844" rx="24"/>
+
+  <!-- Header -->
+  <g transform="translate(16,20)">
+    <rect x="0" y="0" width="358" height="84" class="card"/>
+    <text x="20" y="34" class="title">Nevada Turismo</text>
+    <text x="20" y="56" class="small">Crie mensagens promocionais em segundos</text>
+    <circle cx="320" cy="42" r="20" fill="#FFD166" />
+    <text x="312" y="48" font-size="20" font-weight="700">✈️</text>
+  </g>
+
+  <!-- Form column -->
+  <g transform="translate(16,120)">
+    <rect x="0" y="0" width="220" height="580" class="card"/>
+    <text x="16" y="28" class="label">Frase atrativa</text>
+    <rect x="16" y="34" width="188" height="48" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="62" class="input">Ex: Encante-se com FLORIANÓPOLIS!</text>
+
+    <text x="16" y="108" class="label">Destino (cidade)</text>
+    <rect x="16" y="114" width="188" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="138" class="input">Florianópolis</text>
+
+    <text x="16" y="160" class="label">Data</text>
+    <rect x="16" y="166" width="88" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <rect x="116" y="166" width="88" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="26" y="190" class="input">05/02</text>
+    <text x="126" y="190" class="input">10/02</text>
+
+    <text x="16" y="210" class="label">Dias</text>
+    <rect x="16" y="216" width="72" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="30" y="240" class="input">6</text>
+
+    <text x="16" y="252" class="label">Acomodação</text>
+    <rect x="16" y="258" width="188" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="282" class="input">Duplo</text>
+
+    <text x="16" y="294" class="label">Hotel</text>
+    <rect x="16" y="300" width="188" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="324" class="input">Hotel Beira Mar</text>
+
+    <text x="16" y="336" class="label">Café da manhã</text>
+    <rect x="16" y="342" width="188" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="366" class="input">Incluso</text>
+
+    <text x="16" y="378" class="label">Translado</text>
+    <rect x="16" y="384" width="188" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="408" class="input">Não incluso</text>
+
+    <text x="16" y="430" class="label">Preço por pessoa</text>
+    <rect x="16" y="436" width="188" height="36" fill="#FFF3F3" stroke="#FFD6D6" rx="8"/>
+    <text x="24" y="460" class="input">R$ 2.499,00</text>
+
+    <text x="16" y="472" class="label">Condições (entrada + parcelas)</text>
+    <rect x="16" y="478" width="188" height="36" fill="#FBFDFF" stroke="#E6E9EF" rx="8"/>
+    <text x="24" y="502" class="input">Entrada R$ 400 + 12x de R$ 174,92</text>
+
+    <g transform="translate(16,520)">
+      <rect class="btn" x="0" y="0" width="188" height="40"/>
+      <text x="94" y="26" class="btnText" text-anchor="middle">Gerar mensagem</text>
+    </g>
+
+    <text x="16" y="576" class="small">Dica: preencha apenas os campos variáveis.</text>
+  </g>
+
+  <!-- Preview column -->
+  <g transform="translate(252,120)">
+    <rect x="0" y="0" width="122" height="580" class="card"/>
+    <text x="12" y="28" class="previewTitle">Pré-visualização</text>
+
+    <g transform="translate(12,44)">
+      <rect x="0" y="0" width="98" height="380" class="previewBox"/>
+      <text x="6" y="26" font-size="12" font-weight="700">ENCANTE-SE COM FLORIANÓPOLIS!</text>
+
+      <foreignObject x="6" y="36" width="86" height="300">
+        <body xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Segoe UI', Arial; font-size:13px; color:#0F172A;">
+          <div style="white-space:pre-wrap; line-height:1.3;">
+📍 <b>Destino:</b> Florianópolis
+
+🗓 Data: 05/02 a 10/02 - 6 dias
+👫 Acomodação: Duplo
+✈️ Saída: Uberlândia
+🏨 Hotel: Hotel Beira Mar
+☕ Incluso
+🚫 Translado não incluso
+
+💳 Somente R$2.499,00 por pessoa
+🔥Entrada R$400 + 12x de R$174,92 sem juros no boleto ou cartão
+
+⚠ Boleto sujeito a aprovação do banco
+⚠ Vagas limitadas! Valores sujeitos a alteração sem aviso prévio.
+
+📲 Fale agora com um agente e reserve sua viagem:
+👉https://bit.ly/Atendimento-Nevada-Turismo
+          </div>
+        </body>
+      </foreignObject>
+
+      <g transform="translate(6,342)">
+        <rect x="0" y="0" width="86" height="36" fill="#10B981" rx="8"/>
+        <text x="43" y="23" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Copiar</text>
+      </g>
+
+      <g transform="translate(6,384)">
+        <rect x="0" y="0" width="86" height="28" fill="#FFFFFF" stroke="#E6E9EF" rx="8"/>
+        <text x="43" y="19" font-size="12" fill="#374151" text-anchor="middle">Limpar</text>
+      </g>
+    </g>
+
+    <text x="12" y="480" class="small">Layout funcional: formulário à esquerda, mensagem pronta à direita.</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="20" y="736" class="small">Mockup gerado: abra o arquivo SVG para ver em tamanho real e copiar a imagem.</text>
+
+</svg>
