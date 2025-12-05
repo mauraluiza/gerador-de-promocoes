@@ -1,0 +1,196 @@
+:root {
+    --primary: #0052D4;
+    --secondary: #4364F7;
+    --accent: #6FB1FC;
+    --background: #F0F2F5;
+    --surface: #FFFFFF;
+    --text-main: #1A1A1A;
+    --text-secondary: #666666;
+    --success: #00C851;
+    --gradient: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+    --shadow: 0 10px 30px rgba(0, 82, 212, 0.15);
+    --glass: rgba(255, 255, 255, 0.95);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(67, 100, 247, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 82, 212, 0.1) 0px, transparent 50%);
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-section {
+    padding-right: 20px;
+}
+
+.preview-section {
+    background: #F8F9FA;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p.subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #E1E5EB;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: var(--surface);
+    color: var(--text-main);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(67, 100, 247, 0.1);
+}
+
+.btn {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(67, 100, 247, 0.3);
+}
+
+.preview-box {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    flex-grow: 1;
+    white-space: pre-wrap;
+    font-family: 'Roboto', sans-serif;
+    /* WhatsApp style font */
+    font-size: 14px;
+    line-height: 1.6;
+    color: #111;
+    border: 1px solid #E1E5EB;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.preview-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.copy-btn {
+    background: white;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
