@@ -194,16 +194,20 @@ function copyText() {
     const text = document.getElementById('previewArea').innerText;
     navigator.clipboard.writeText(text).then(() => {
         const btn = document.querySelector('.copy-btn');
-        const originalText = btn.innerText;
+        const originalText = 'Copiar Texto'; // Hardcoded to ensure reset works correctly
+
         btn.innerText = 'Copiado!';
-        btn.style.background = '#00C851';
-        btn.style.color = 'white';
-        btn.style.borderColor = '#00C851';
+        // Use the primary teal color for success state, keeping text black for contrast
+        btn.style.background = 'var(--primary)';
+        btn.style.color = '#000000';
+        btn.style.borderColor = 'var(--primary)';
+
         setTimeout(() => {
             btn.innerText = originalText;
-            btn.style.background = 'white';
-            btn.style.color = 'var(--secondary)';
-            btn.style.borderColor = 'var(--secondary)';
+            // Reset to transparent background with teal border/text
+            btn.style.background = 'transparent';
+            btn.style.color = 'var(--primary)';
+            btn.style.borderColor = 'var(--primary)';
         }, 2000);
     });
 }

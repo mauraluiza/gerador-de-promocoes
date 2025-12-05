@@ -1,15 +1,13 @@
 :root {
-    --primary: #0052D4;
-    --secondary: #4364F7;
-    --accent: #6FB1FC;
-    --background: #F0F2F5;
-    --surface: #FFFFFF;
-    --text-main: #1A1A1A;
-    --text-secondary: #666666;
-    --success: #00C851;
-    --gradient: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
-    --shadow: 0 10px 30px rgba(0, 82, 212, 0.15);
-    --glass: rgba(255, 255, 255, 0.95);
+    --primary: #00D2B5;
+    --background: #111111;
+    --surface: #1A1A1A;
+    --input-bg: #2A2A2A;
+    --text-main: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --border: #333333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --success: #00D2B5;
 }
 
 * {
@@ -20,16 +18,13 @@
 }
 
 body {
-    background: var(--background);
+    background-color: var(--background);
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-image:
-        radial-gradient(at 0% 0%, rgba(67, 100, 247, 0.1) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(0, 82, 212, 0.1) 0px, transparent 50%);
 }
 
 .app-container {
@@ -38,12 +33,11 @@ body {
     gap: 40px;
     max-width: 1200px;
     width: 100%;
-    background: var(--glass);
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
+    background: var(--surface);
+    border-radius: 12px;
     padding: 40px;
     box-shadow: var(--shadow);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border);
 }
 
 .input-section {
@@ -51,22 +45,19 @@ body {
 }
 
 .preview-section {
-    background: #F8F9FA;
-    border-radius: 20px;
+    background: var(--input-bg);
+    border-radius: 12px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
 }
 
 h1 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 10px;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-main);
 }
 
 p.subtitle {
@@ -104,28 +95,28 @@ select,
 textarea {
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid #E1E5EB;
-    border-radius: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
     font-size: 14px;
-    transition: all 0.3s ease;
-    background: var(--surface);
+    transition: border-color 0.2s ease;
+    background: var(--input-bg);
     color: var(--text-main);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--secondary);
+    border-color: var(--primary);
     outline: none;
-    box-shadow: 0 0 0 4px rgba(67, 100, 247, 0.1);
+    box-shadow: 0 0 0 2px rgba(0, 210, 181, 0.1);
 }
 
 .btn {
-    background: var(--gradient);
-    color: white;
+    background: var(--primary);
+    color: #000000;
     border: none;
     padding: 16px 32px;
-    border-radius: 12px;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -139,21 +130,20 @@ textarea:focus {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(67, 100, 247, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 210, 181, 0.3);
 }
 
 .preview-box {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 20px 10px 20px 20px;
     flex-grow: 1;
     white-space: pre-wrap;
     font-family: 'Roboto', sans-serif;
-    /* WhatsApp style font */
     font-size: 14px;
     line-height: 1.6;
-    color: #111;
-    border: 1px solid #E1E5EB;
+    color: var(--text-main);
+    border: 1px solid var(--border);
     margin-bottom: 20px;
     overflow-y: auto;
     max-height: 500px;
@@ -173,19 +163,19 @@ textarea:focus {
 }
 
 .copy-btn {
-    background: white;
-    border: 2px solid var(--secondary);
-    color: var(--secondary);
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .copy-btn:hover {
-    background: var(--secondary);
-    color: white;
+    background: var(--primary);
+    color: #000000;
 }
 
 @media (max-width: 768px) {
