@@ -16,6 +16,18 @@ document.getElementById('packageValue').addEventListener('input', function (e) {
 });
 document.getElementById('downPaymentPercent').addEventListener('input', calculatePrices);
 document.getElementById('installments').addEventListener('change', calculatePrices);
+document.getElementById('holidayCheckbox').addEventListener('change', function () {
+    const input = document.getElementById('holidayName');
+    if (this.checked) {
+        input.style.display = 'block';
+        input.focus();
+    } else {
+        input.style.display = 'none';
+        input.value = '';
+    }
+    generateText();
+});
+document.getElementById('holidayName').addEventListener('input', generateText);
 
 // Add specific listeners for other currency fields to format
 ['pricePerPerson', 'downPayment', 'installmentValue'].forEach(id => {
@@ -152,10 +164,14 @@ function generateText() {
     const transferIncluded = document.getElementById('transferIncluded').checked;
     const transferText = transferIncluded ? '🚞 Translado incluso' : '🚫 Translado não incluso';
 
+    const holidayChecked = document.getElementById('holidayCheckbox').checked;
+    const holidayName = document.getElementById('holidayName').value;
+    const holidayText = (holidayChecked && holidayName) ? ` / *${holidayName}*` : '';
+
     const text = `*${finalHeadline}*
 
 📍 *Destino:* ${city || '...'}
-🗓 Data: ${formatDateDisplay(dateStart)} a ${formatDateDisplay(dateEnd)} - ${days || '...'} dias
+🗓 Data: ${formatDateDisplay(dateStart)} a ${formatDateDisplay(dateEnd)} - ${days || '...'} dias${holidayText}
 👫 Acomodação: ${accommodation}
 ✈️ Saída: Uberlândia 
 🏨 Hotel: ${hotel || '...'}
