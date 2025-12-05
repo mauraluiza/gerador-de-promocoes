@@ -49,28 +49,6 @@ Este é um aplicativo web simples e eficiente desenvolvido para agilizar a cria�
 4.  Confira a mensagem gerada na caixa "Prévia da Mensagem".
 5.  Clique em "Copiar Texto" e cole onde desejar!
 
-## 📝 Exemplo de Saída
-
-```text
-*Pacote Imperdível para GRAMADO*
-
-📍 *Destino:* Gramado
-🗓 Data: 10/12/2025 a 15/12/2025 - 6 dias / *Natal Luz*
-👫 Acomodação: Duplo
-✈️ Saída: Uberlândia 
-🏨 Hotel: Hotel Serra da Estrela
-☕ Café da manhã
-🚞 Translado incluso 
-
-💳 Somente R$ 1.500,00 por pessoa
-🔥Entrada R$ 300,00 + 10x de R$ 270,00 sem juros no boleto ou cartão
-
-⚠ Boleto sujeito a aprovação do banco
-⚠ Vagas limitadas! Valores sujeitos a alteração sem aviso prévio.
-
-📲 Fale agora com um agente e reserve sua viagem:
-👉https://bit.ly/Atendimento-Nevada-Turismo
-```
 
 ---
 Desenvolvido para **Nevada Turismo**.
